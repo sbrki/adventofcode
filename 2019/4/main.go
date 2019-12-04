@@ -68,6 +68,7 @@ func specialElfRequirement(x int) bool {
 	for _, c := range multis {
 		if count[c] == 2 {
 			satisfied = true
+			break
 		}
 	}
 	return satisfied
@@ -87,7 +88,7 @@ func main() {
 
 /*
    note: I've structured code in an unoptimal manner (intToArray gets called
-   more than necesarry) in order to make it easier to swtich between
+   more than necesarry) in order to make it easier to switch between
    part 1 and part 2.
    Also, search space can be reduced given the password non-descending requirements,
    but it wouldn't speed things up a lot, especially given it takes
